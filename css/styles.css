@@ -277,6 +277,7 @@ h6 {
 }
 
 /*------- Media Queries ----------*/
+
 @media (max-width: 1200px) {
   .content-wrapper {
     width: 90%;

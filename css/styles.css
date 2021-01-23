@@ -384,14 +384,14 @@ h6 {
   align-items: center;
   justify-content: center;
   grid-area: left-column;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .project-card {
   background-color: var(--secondary-bg-color);
   border-radius: 10px;
   box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.7);
-  width: 350px;
+  width: 400px;
 }
 
 .card-header img {
@@ -448,10 +448,6 @@ h6 {
 }
 
 .project-tags {
-  /* display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between; */
   padding: 2rem 1rem;
 }
 
@@ -468,15 +464,133 @@ span.project-tag {
   padding: 8px 15px;
   margin: 0.8rem;
 }
+
+/*------- Contact Section ---------*/
+
+/* Contact Form */
+.contact-wrapper {
+  padding: 8rem 0 4rem;
+  text-align: center;
+}
+
+.form-wrapper {
+  margin-top: 4rem;
+}
+
+form {
+  margin: 0 auto;
+  font-family: "Balsamiq Sans", cursive;
+}
+
+form label,
+form input,
+form textarea {
+  display: block;
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+form label {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+}
+
+form input,
+form textarea {
+  padding: 1rem;
+  border-width: 1px;
+}
+
+form input:active {
+  border-color: var(--primary-header-color);
+}
+
+form input[type="submit"] {
+  width: 150px;
+  font-family: "Balsamiq Sans", cursive;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0.7rem;
+
+  color: var(--tertiary-text-color);
+  background-color: var(--primary-header-color);
+  cursor: pointer;
+  border: none;
+}
+
+form input[type="submit"]:hover,
+form input[type="submit"]:focus {
+  opacity: 0.8;
+}
+
+.form-row {
+  margin-bottom: 1.3rem;
+}
+
+.contact-social {
+  margin: 6rem 0 1rem 0;
+}
+
+/* Social Links */
+
+.social-links {
+  width: 80%;
+  padding: 0.5rem 0;
+  text-align: center;
+  margin: 0 auto;
+  /* border: 2px solid crimson; */
+}
+
+.social-link {
+  margin: 0 2rem 2rem 0;
+}
+
+.social-link i {
+  color: var(--primary-header-color);
+  font-size: 5rem;
+}
+
+.social-link i:hover,
+.social-link i:focus {
+  opacity: 0.8;
+}
+
+/*---------- Footer -----------*/
+footer {
+  padding: 5rem 0 3rem;
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+}
+
+.footer-note {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+.copy {
+  font-size: 16px;
+  font-weight: 500;
+}
+
 /*------- Media Queries ----------*/
 
 @media (max-width: 1200px) {
   .content-wrapper {
     width: 90%;
   }
+
+  form label,
+  form input,
+  form textarea {
+    width: 350px;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .navigation {
     display: none;
   }
@@ -497,7 +611,17 @@ span.project-tag {
     grid-template-areas:
       "left-column"
       "right-column";
-    padding: 20rem 0 10rem 0;
+    padding: 15rem 0 10rem 0;
+  }
+
+  .right-column {
+    padding: 5rem 0.8rem;
+    margin: 0 5%;
+  }
+
+  .intro-description {
+    display: block;
+    margin: 0 auto;
   }
 
   .skills-details {
@@ -510,9 +634,20 @@ span.project-tag {
       "right-column";
     grid-template-columns: 1fr;
   }
+
+  .project-card {
+    width: 350px;
+  }
 }
 
 @media (max-width: 478px) {
+  .section-header {
+    font-size: 46px;
+  }
+
+  .section-contentHead {
+    font-size: 18px;
+  }
   .introduction {
     padding-top: 10rem;
   }
@@ -522,12 +657,17 @@ span.project-tag {
     height: 200px;
   }
 
+  .right-column {
+    padding: 5rem 0;
+  }
+
   .intro-text {
-    font-size: 68px;
+    font-size: 64px;
+    margin-bottom: 2rem;
   }
 
   .subintro-text {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .skills-details {
@@ -536,8 +676,8 @@ span.project-tag {
   }
 
   .skill {
-    width: 150px;
-    height: 150px;
+    width: 145px;
+    height: 145px;
   }
 
   .skill i {
@@ -549,11 +689,11 @@ span.project-tag {
   }
 
   .project-card {
-    width: 100%;
+    width: 90%;
   }
 
   .card-header img {
-    height: 250px;
+    height: 200px;
   }
 
   .project-link {
@@ -561,12 +701,33 @@ span.project-tag {
   }
 
   .project-title {
-    font-size: 36px;
+    font-size: 34px;
     line-height: 1;
   }
 
   .project-summary {
     font-size: 20px;
     margin-bottom: 0;
+  }
+
+  form label,
+  form input,
+  form textarea {
+    width: 270px;
+  }
+
+  .social-link {
+    margin: 0 1.3rem 2rem 0;
+  }
+  .social-link i {
+    font-size: 3.2rem;
+  }
+
+  .footer-note {
+    font-size: 17px;
+  }
+
+  .copy {
+    font-size: 14px;
   }
 }

@@ -41,8 +41,6 @@ themeOptions.forEach(themeOption => {
         let mode = themeOption.dataset.mode;
         
         setTheme(mode);  
-        
-        
     })  
 });
 
@@ -61,5 +59,7 @@ function setTheme(mode) {
         stylesheet.setAttribute('href', 'css/green.css')
     }
 
+
+        // set localStorage to save theme
     localStorage.setItem('theme', mode);
 }

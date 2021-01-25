@@ -1,0 +1,11 @@
+:root {
+  --primary-header-color: #333;
+
+  --main-bg-color: #edecec;
+  --secondary-bg-color: #eaecec;
+
+  --primary-text-color: #333;
+  --secondary-text-color: #222;
+  --tertiary-text-color: #fff;
+  --profile-text-color: #36e6cb;
+}

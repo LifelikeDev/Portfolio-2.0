@@ -6,6 +6,12 @@ const line1 = document.querySelector('.line1');
 const line2 = document.querySelector('.line2');
 const line3 = document.querySelector('.line3');
 
+const stylesheet = document.querySelector('#theme-style');
+const themeOptions = document.querySelectorAll('.theme-option');
+
+
+    // Hamburger and Responsive Navigation
+
 hamburger.addEventListener('click', () => {
     navigation.classList.toggle('block');
     nav.classList.toggle('responsive');
@@ -17,3 +23,43 @@ hamburger.addEventListener('click', () => {
         navList.classList.toggle('responsive-list');
     });
 });
+
+
+    // Theme Style Change
+// initialize localStorage
+let theme = localStorage.getItem('theme');
+
+if(theme === null) {
+    setTheme('blue');   // set default theme to blue
+} else {
+    setTheme(theme);
+}
+
+themeOptions.forEach(themeOption => {
+
+    themeOption.addEventListener('click', () => {
+        let mode = themeOption.dataset.mode;
+        
+        setTheme(mode);  
+        
+        
+    })  
+});
+
+function setTheme(mode) {
+
+    if(mode === 'blue') {
+        stylesheet.setAttribute('href', 'css/styles.css')
+    }
+    if(mode === 'brown') {
+        stylesheet.setAttribute('href', 'css/brown.css')
+    }
+    if(mode === 'grey') {
+        stylesheet.setAttribute('href', 'css/grey.css')
+    }
+    if(mode === 'green') {
+        stylesheet.setAttribute('href', 'css/green.css')
+    }
+
+    localStorage.setItem('theme', mode);
+}

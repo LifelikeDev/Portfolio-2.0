@@ -126,6 +126,7 @@ h6 {
 .logo {
   width: 7rem;
   height: 5rem;
+  cursor: pointer;
 }
 
 .logo img {
@@ -205,7 +206,7 @@ h6 {
 }
 
 .responsive-list {
-  margin: 4rem 0;
+  margin: 2rem 0 1rem;
 }
 
 /*------- Introduction Section -----*/
@@ -584,7 +585,7 @@ footer {
 
 @media (max-width: 1200px) {
   .content-wrapper {
-    width: 90%;
+    width: 85%;
   }
 
   form label,
@@ -606,8 +607,9 @@ footer {
   }
   .responsive {
     right: -2rem;
+    justify-content: space-around;
     transform: translateX(0%);
-    height: 91vh;
+    height: 93vh;
   }
 
   .introduction {
@@ -646,7 +648,7 @@ footer {
 
 @media (max-width: 478px) {
   .section-header {
-    font-size: 46px;
+    font-size: 42px;
   }
 
   .section-contentHead {
@@ -689,7 +691,7 @@ footer {
   }
 
   .skill-tag {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .project-card {
@@ -700,12 +702,17 @@ footer {
     height: 200px;
   }
 
+  .card-body {
+    padding: 2rem 0;
+  }
+
   .project-link {
     padding: 8px 12px;
+    font-size: 14px;
   }
 
   .project-title {
-    font-size: 34px;
+    font-size: 30px;
     line-height: 1;
   }
 

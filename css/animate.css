@@ -44,13 +44,13 @@
 .projectLeft {
   transform: translate(-10%, 0);
   opacity: 0;
-  transition: all 0.5s ease-in;
+  transition: all 0.6s ease-in;
 }
 
 .projectRight {
   transform: translate(10%, 0);
   opacity: 0;
-  transition: all 0.5s ease-in;
+  transition: all 0.6s ease-in;
 }
 
 .projectLeft.slide,

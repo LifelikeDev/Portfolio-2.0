@@ -33,22 +33,8 @@ scrollAnimation();
 function scrollAnimation() {
     const innerHeight = window.innerHeight / 5 * 2;
 
-        // sections
-    // sections.forEach(section => {
-    //     const sectionTop = section.getBoundingClientRect().top / 1.5;
-
-    //     // console.log(innerHeight, sectionTop);
-
-    //     if (sectionTop < innerHeight) {
-    //         section.classList.add('reveal');
-    //     } else {
-    //         section.classList.remove('reveal');
-    //     }
-    // })
-
     aboutSubs.forEach(aboutSub => {
         const aboutTop = aboutSub.getBoundingClientRect().top / 1.5;
-        // console.log(innerHeight, aboutTop);
 
         if (aboutTop < innerHeight) {
             aboutSub.classList.add('reveal');
@@ -60,8 +46,6 @@ function scrollAnimation() {
     sectionHeads.forEach(sectionHead => {
         const sectionHeadTop = sectionHead.getBoundingClientRect().top / 1.9;
 
-        // console.log(sectionHeadTop, window.innerHeight);
-
         if (sectionHeadTop < innerHeight) {
             sectionHead.classList.add('slide');
         } else {
@@ -72,8 +56,7 @@ function scrollAnimation() {
     contentHeads.forEach(contentHead => {
         const contentHeadTop = contentHead.getBoundingClientRect().top / 1.9;
 
-        // console.log(contentHeadTop, window.innerHeight);
-
+        // console.log(contentHeadTop, innerHeight);
         if (contentHeadTop < innerHeight) {
             contentHead.classList.add('slide');
         } else {
@@ -84,8 +67,6 @@ function scrollAnimation() {
     projectImages.forEach(projectImage => {
         const projectImageTop = projectImage.getBoundingClientRect().top / 1.9;
 
-        // console.log(projectImageTop, window.innerHeight);
-
         if (projectImageTop < innerHeight) {
             projectImage.classList.add('slide');
         } else {
@@ -95,8 +76,6 @@ function scrollAnimation() {
 
     projectDescriptions.forEach(projectDescription => {
         const projectDescriptionTop = projectDescription.getBoundingClientRect().top / 1.9;
-
-        // console.log(projectDescriptionTop, window.innerHeight);
 
         if (projectDescriptionTop < innerHeight) {
             projectDescription.classList.add('slide');

@@ -417,8 +417,8 @@ h6 {
   border-radius: 5px;
   color: var(--tertiary-text-color);
   cursor: pointer;
-  padding: 12px 25px;
-  margin: 0 3% 0 0;
+  padding: 3% 12%;
+  margin: 0 3%;
   text-align: center;
 
   font-size: 16px;
@@ -588,6 +588,17 @@ footer {
     width: 85%;
   }
 
+  .project-card {
+    width: 350px;
+  }
+  .project-leftColumn {
+    padding-right: 1.3rem;
+  }
+
+  .project-rightColumn {
+    padding-left: 3rem;
+  }
+
   form label,
   form input,
   form textarea {
@@ -643,6 +654,14 @@ footer {
 
   .project-card {
     width: 350px;
+  }
+
+  .project-leftColumn {
+    padding-right: 0;
+  }
+
+  .project-rightColumn {
+    padding-left: 0;
   }
 }
 
@@ -707,7 +726,6 @@ footer {
   }
 
   .project-link {
-    padding: 8px 12px;
     font-size: 14px;
   }
 

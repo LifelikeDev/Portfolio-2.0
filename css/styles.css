@@ -241,7 +241,7 @@ h6 {
 }
 
 #right-bottom {
-  animation: moveRightTop 3s linear infinite alternate;
+  animation: moveRightTop 4s linear infinite alternate;
 }
 
 #left {
@@ -249,7 +249,7 @@ h6 {
 }
 
 #left-top {
-  animation: moveLeftBottom 3s linear infinite alternate;
+  animation: moveLeftBottom 4s linear infinite alternate;
 }
 
 @keyframes moveRight {
@@ -258,7 +258,7 @@ h6 {
   }
 
   50% {
-    transform: translateX(-40px) rotateY(90deg);
+    transform: translateX(-40px) rotateY(45deg);
   }
 
   100% {
@@ -272,7 +272,7 @@ h6 {
   }
 
   50% {
-    transform: translateX(40px) rotateY(90deg);
+    transform: translateX(40px) rotateY(45deg);
   }
 
   100% {
@@ -353,7 +353,7 @@ h6 {
   grid-area: right-column;
   padding: 10rem 0 5rem;
   border: 3px solid var(--profile-text-color);
-  animation: flow 5s infinite ease-in forwards;
+  animation: flow 8s infinite ease-in forwards;
 }
 
 /* Right column border animation */

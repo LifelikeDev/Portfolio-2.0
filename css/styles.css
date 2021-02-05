@@ -229,15 +229,83 @@ h6 {
   padding: 2rem 0 5rem;
 }
 
-.left-column img {
-  display: block;
-  margin: 0 auto;
-  border: 5px solid var(--tertiary-text-color);
-  border-radius: 50%;
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  margin-bottom: 2rem;
+/* SVG Animation */
+#right,
+#left {
+  transform-origin: top;
+  transform-box: fill-box;
+}
+
+#right {
+  animation: moveRight 15s linear infinite alternate;
+}
+
+#right-bottom {
+  animation: moveRightTop 3s linear infinite alternate;
+}
+
+#left {
+  animation: moveLeft 15s linear infinite alternate;
+}
+
+#left-top {
+  animation: moveLeftBottom 3s linear infinite alternate;
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0px) rotateX(0deg);
+  }
+
+  50% {
+    transform: translateX(-40px) rotateY(90deg);
+  }
+
+  100% {
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0px) rotateX(0deg);
+  }
+
+  50% {
+    transform: translateX(40px) rotateY(90deg);
+  }
+
+  100% {
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+
+@keyframes moveRightTop {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes moveLeftBottom {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .theme-wrapper {
@@ -276,6 +344,8 @@ h6 {
   font-family: "Work Sans", sans-serif;
   font-size: 18px;
   text-align: center;
+  padding: 0 1rem;
+  line-height: 1.4;
 }
 
 /* Right Column */
@@ -283,6 +353,36 @@ h6 {
   grid-area: right-column;
   padding: 10rem 0 5rem;
   border: 3px solid var(--profile-text-color);
+  animation: flow 5s infinite ease-in forwards;
+}
+
+/* Right column border animation */
+@keyframes flow {
+  0%,
+  100% {
+    border-top: 5px solid var(--profile-text-color);
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid transparent;
+  }
+  25% {
+    border-top: 5px solid transparent;
+    border-right: 5px solid var(--profile-text-color);
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid transparent;
+  }
+  50% {
+    border-top: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid var(--profile-text-color);
+    border-left: 5px solid transparent;
+  }
+  75% {
+    border-top: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid var(--profile-text-color);
+  }
 }
 
 .intro-description {
@@ -627,9 +727,17 @@ footer {
   .introduction {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "left-column"
-      "right-column";
+      "right-column"
+      "left-column";
     padding: 15rem 0 10rem 0;
+  }
+
+  .svg-wrapper {
+    display: none;
+  }
+
+  .left-column {
+    margin: 5% 0 0;
   }
 
   .right-column {
@@ -674,9 +782,9 @@ footer {
   .section-contentHead {
     font-size: 18px;
   }
-  .introduction {
+  /* .introduction {
     padding-top: 10rem;
-  }
+  } */
 
   .left-column img {
     width: 200px;

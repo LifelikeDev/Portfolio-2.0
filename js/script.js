@@ -63,3 +63,11 @@ function setTheme(mode) {
         // set localStorage to save theme
     localStorage.setItem('theme', mode);
 }
+
+// dynamic footer year stamp
+const year = document.getElementById('year');
+
+const date = new Date();
+let currYear = date.getFullYear();
+
+year.innerText = currYear;

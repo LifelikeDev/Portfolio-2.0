@@ -107,7 +107,6 @@ h6 {
 /*---------- Header --------*/
 #header {
   background-color: var(--primary-header-color);
-  /* position: relative; */
   /* width: 100%; */
 }
 
@@ -148,6 +147,7 @@ h6 {
   font-size: 1.7rem;
   font-weight: 600;
   width: 40rem;
+  padding-right: 0.8rem;
 }
 
 .nav-list {
@@ -166,7 +166,7 @@ h6 {
 #hamburger {
   cursor: pointer;
   position: fixed;
-  right: 2rem;
+  right: 2.5rem;
   display: none;
 }
 
@@ -323,6 +323,7 @@ h6 {
   cursor: pointer;
   margin: 5px;
 }
+
 .theme-option:hover {
   border-width: 5px;
 }
@@ -445,14 +446,12 @@ h6 {
   grid-gap: 5rem;
   text-align: center;
   margin: 4rem 0 0 0;
-  /* border: 5px solid sienna; */
 }
 
 .skill {
   display: inline-block;
   width: 200px;
   height: 200px;
-  /* border: 5px solid crimson; */
 }
 
 .skill i {
@@ -711,12 +710,15 @@ footer {
   .navigation {
     display: none;
   }
+
   #hamburger {
     display: block;
   }
+
   .block {
     display: flex;
   }
+
   .responsive {
     right: -2rem;
     justify-content: space-around;
@@ -782,9 +784,6 @@ footer {
   .section-contentHead {
     font-size: 18px;
   }
-  /* .introduction {
-    padding-top: 10rem;
-  } */
 
   .left-column img {
     width: 200px;

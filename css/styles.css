@@ -79,6 +79,10 @@ h6 {
   font-size: 18px;
 }
 
+small {
+  font-size: 12px;
+}
+
 /* Sections Definitions */
 .section-dark {
   background-color: var(--primary-header-color);
